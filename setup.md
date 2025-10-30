@@ -9,6 +9,8 @@ npm run dev
 ```
 
 Vent til du ser:
+Ready in X.X
+
 ```
 Lovdata proxy server running at http://localhost:3001
 La denne terminalen stå åpen!
