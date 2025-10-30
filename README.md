@@ -1,6 +1,15 @@
 # Lovvelger
 
 En komponent for å søke, navigere og velge paragrafer fra norske lover og forskrifter.
+<img width="2640" height="1450" alt="lovdata1" src="https://github.com/user-attachments/assets/f6ced7e5-a550-488c-b21b-9354c094c4cf" />
+<img width="2438" height="1322" alt="image" src="https://github.com/user-attachments/assets/e26ffbf7-1729-4cba-8363-da66f89f9010" />
+<img width="2358" height="1332" alt="image" src="https://github.com/user-attachments/assets/3fe60cc2-ba76-4d12-815c-7910a2466f36" />
+<img width="2460" height="1332" alt="image" src="https://github.com/user-attachments/assets/bc937418-619b-4317-9bce-cf4bc0bbc16b" />
+<img width="2410" height="1422" alt="image" src="https://github.com/user-attachments/assets/44c0b86e-285b-43d6-9cc4-20f276f788bf" />
+
+
+
+
 
 ## Oversikt
 
