@@ -61,17 +61,7 @@ Prosjektet består av tre hovedkomponenter:
 
 ### Uten Docker (lokal utvikling)
 
-#### Terminal 1 - Proxy server
-```bash
-npm install
-node proxy-server.js
-```
-
-#### Terminal 2 - Frontend
-```bash
-npm install
-npm run dev
-```
+#### [Se oppsett-instruksjoner](./setup.md)
 
 ### Stopp applikasjonen
 ```bash
