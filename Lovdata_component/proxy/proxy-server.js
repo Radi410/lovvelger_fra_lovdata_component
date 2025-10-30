@@ -173,8 +173,8 @@ app.get('/api/test', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`🚀 Lovdata proxy server running at http://localhost:${PORT}`);
-  console.log(`📍 Endpoints:`);
+  console.log(`Lovdata proxy server running at http://localhost:${PORT}`);
+  console.log(` Endpoints:`);
   console.log(`   - GET /api/test`);
   console.log(`   - GET /api/lovdata-search?q=<query>`);
   console.log(`   - GET /api/lovdata-document/:base`);
