@@ -112,8 +112,8 @@ class LovdataScraper {
     }
 
     const data = await response.json();
-    console.log('Raw search data:', data); // 👈 LEGG TIL DENNE
-    console.log('Results array:', data.results); // 👈 OG DENNE
+    console.log('Raw search data:', data); 
+    console.log('Results array:', data.results); 
     
     return data.results || [];
   } catch (error) {
@@ -145,7 +145,7 @@ class LovdataScraper {
         return {
           id: para.id || `${chapter.id}-para-${pIndex}`,
           number: paraNumber,
-          title: paraTitle, // ✅ Må alltid ha en tittel!
+          title: paraTitle, 
           content: paraContent,
           chapterIndex: para.id || `${chapter.id}-paragraf-${pIndex}`,
           juridicalReference: `${paraNumber}. ${paraTitle}`,

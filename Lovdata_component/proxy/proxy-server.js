@@ -47,10 +47,10 @@ app.get('/api/lovdata-search', async (req, res) => {
       }
     });
 
-    console.log(`✅ Search: Found ${results.length} results for "${q}"`);
+    console.log(` Search: Found ${results.length} results for "${q}"`);
     res.json({ query: q, results });
   } catch (error) {
-    console.error('❌ Search error:', error);
+    console.error('Search error:', error);
     res.status(500).json({ error: 'Failed to scrape Lovdata', message: error.message });
   }
 });
@@ -59,7 +59,7 @@ app.get('/api/lovdata-search', async (req, res) => {
 app.get('/api/lovdata-document/:base', async (req, res) => {
   const { base } = req.params;
   
-  console.log(`📥 Fetching document: ${base}`);
+  console.log(` Fetching document: ${base}`);
   
   if (!base) {
     return res.status(400).json({ error: 'Base parameter is required' });
@@ -83,7 +83,7 @@ app.get('/api/lovdata-document/:base', async (req, res) => {
     }
     
     const lovdataUrl = `https://lovdata.no/dokument/NL/${docType}/${dateId}`;
-    console.log(`🌐 Requesting: ${lovdataUrl}`);
+    console.log(` Requesting: ${lovdataUrl}`);
     
     const response = await fetch(lovdataUrl, {
       headers: {
@@ -95,7 +95,7 @@ app.get('/api/lovdata-document/:base', async (req, res) => {
     });
 
     if (!response.ok) {
-      console.error(`❌ Lovdata returned ${response.status}`);
+      console.error(` Lovdata returned ${response.status}`);
       return res.status(response.status).json({ 
         error: 'Failed to fetch document', 
         status: response.status,
@@ -146,7 +146,7 @@ app.get('/api/lovdata-document/:base', async (req, res) => {
       }
     });
 
-    console.log(`✅ Scraped: ${title} (${chapters.length} chapters)`);
+    console.log(` Scraped: ${title} (${chapters.length} chapters)`);
     
     res.json({
       base: base,
@@ -156,7 +156,7 @@ app.get('/api/lovdata-document/:base', async (req, res) => {
       url: lovdataUrl
     });
   } catch (error) {
-    console.error('❌ Scraping error:', error.message);
+    console.error('Scraping error:', error.message);
     res.status(500).json({ 
       error: 'Failed to scrape document', 
       message: error.message

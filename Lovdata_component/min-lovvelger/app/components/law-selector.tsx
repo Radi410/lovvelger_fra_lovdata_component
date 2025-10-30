@@ -79,7 +79,7 @@ export function LawSelector({
         shortName: l.shortName,
         fullName: l.fullName,
         chaptersCount: l.chapters.length,
-        firstChapter: l.chapters[0] // 👈 Se første kapittel
+        firstChapter: l.chapters[0] 
       })));
       const filteredLaws = filter 
       
@@ -213,7 +213,7 @@ export function LawSelector({
     const law = laws.find(l => l.id === lawId);
     if (law && law.chapters.length === 0) {
       try {
-        // Bruk law.base i stedet for lawId! 👇
+        
         const details = await lovdataScraper.fetchLaw(law.base);
         if (details) {
           // Fix "Hovedmeny" title
