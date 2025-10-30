@@ -47,24 +47,8 @@ Prosjektet består av tre hovedkomponenter:
 
 - Node.js 20 eller nyere
 - npm eller yarn
-- Docker og Docker Compose (anbefalt)
 
-### Med Docker (anbefalt)
-```bash
-# Klon repository
-git clone [repository-url]
-cd lovvelger
 
-# Start alle tjenester
-docker-compose up --build
-
-# Eller kjør i bakgrunnen
-docker-compose up -d --build
-```
-
-Applikasjonen er tilgjengelig på:
-- Frontend: http://localhost:3000
-- Proxy API: http://localhost:3001
 
 ### Uten Docker (lokal utvikling)
 
@@ -82,8 +66,7 @@ npm run dev
 
 ### Stopp applikasjonen
 ```bash
-# Med Docker
-docker-compose down
+
 
 # Uten Docker
 # Trykk Ctrl+C i begge terminalene
@@ -155,7 +138,7 @@ function MyComponent() {
 />
 ```
 
-## API
+## Webscraper/API
 
 ### LawSelector Props
 
@@ -225,11 +208,12 @@ lovvelger/
 │   │   ├── lovdata-scraper.tsx
 │   │   └── ui/           # Shadcn/ui komponenter
 │   └── page.tsx          # Hovedside
-├── proxy-server.js       # Express proxy server
-├── docker-compose.yml    # Docker Compose config
-├── Dockerfile           # Frontend Dockerfile
-├── Dockerfile.proxy     # Proxy Dockerfile
-└── package.json         # Dependencies
+├─ package.json         # Dependencies
+proxy/
+├─ proxy_server # proxy to run
+├─ package.json         # Dependencies
+
+
 ```
 
 ### Teknologier
@@ -249,28 +233,6 @@ npm run type-check
 
 # Kjør build test
 npm run build
-```
-
-### Docker kommandoer
-```bash
-# Bygg images på nytt
-docker-compose build
-
-# Se logger
-docker-compose logs -f
-
-# Se logger for én tjeneste
-docker-compose logs -f frontend
-docker-compose logs -f proxy
-
-# Restart tjenester
-docker-compose restart
-
-# Stopp og fjern containere
-docker-compose down
-
-# Stopp og fjern alt (inkl. volumes)
-docker-compose down -v
 ```
 
 ## Bidrag
